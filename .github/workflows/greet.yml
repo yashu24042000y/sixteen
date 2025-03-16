@@ -1,28 +1,24 @@
-name : CICD pipeline
+name : yash cicd pipeline
+
 on:
     push:
         branches : ["main"]
     pull_request:
         branches : ["main"]
-    
-jobs:
-    build:
-         runs-on: ubuntu-latest
-         steps:
-            - name : run server
-              run: echo i am yash
 
-         
-            - name : Install dependies
-              run : |
-                python -m pip install --upgrade pip
-              
-
-    Test:
+jobs :
+    build :
         runs-on : ubuntu-latest
-        steps:
-           - name : yash created server
-             run : echo yash built server
+
+        steps: 
+            - name : run the dependencies
+              run : echo dependencies are running...
+
+            - name : running the testapp
+              run : test app is running...
+
+            - name : checkout the code 
+              uses : actions/checkout@v4
         
 
 
