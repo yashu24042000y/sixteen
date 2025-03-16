@@ -1,4 +1,20 @@
 name : CICD pipeline
+on:
+    push:
+        branches : ["main"]
+    pull_request:
+        branches : ["main"]
+    
+jobs:
+    build:
+         runs-on: ubuntu-latest
+         steps:
+            - name : run server
+              run: echo i am yash
+
+         
+            - name : Install dependies
+              run : pip install -r requirement.txt
 
 
         
