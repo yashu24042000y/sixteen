@@ -16,7 +16,14 @@ jobs:
             - name : Install dependies
               run : |
                 python -m pip install --upgrade pip
-                pip install -r requirement.txt
+              
+
+    Test:
+        runs-on : ubuntu-latest
+        steps:
+           - name : yash created server
+             run : echo yash built server
+        
 
 
         
